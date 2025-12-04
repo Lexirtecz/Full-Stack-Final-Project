@@ -46,13 +46,14 @@ El sistema interactúa con tres tablas principales, definidas por las consultas 
 
 * Un servidor web con soporte para **PHP 7.4+** (o superior).
 * Un servidor de base de datos **MySQL** o **PostgreSQL** (configurado para usar **PDO**).
-* El archivo de configuración de conexión a la base de datos (`db.php`) debe estar presente y configurado en el directorio del Back-End.
+
 
 ## 💻 Instalación y Ejecución
 
+* El archivo de configuración de conexión a la base de datos (`db.php`) debe estar presente y configurado en el directorio del Back-End.
 La instalación se basa en la colocación de archivos en la estructura de directorios del servidor web:
 
-```bash
+
 # 1. Configurar y crear la Base de Datos (ej. en MySQL o PostgreSQL)
 #    (Se debe crear un script SQL para las tablas login, usuarios_completos y permisos_sello)
 
