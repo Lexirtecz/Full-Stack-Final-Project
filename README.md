@@ -63,10 +63,9 @@ La instalación se basa en la colocación de archivos en la estructura de direct
 #    Ejemplo:
     <?php
     $host = 'localhost';
-    $db   = 'nombre_de_la_bd';
-    $user = 'usuario_bd';
-    $pass = 'contraseña_bd';
-    $charset = 'utf8mb4';
+    $db   = '"inter_sellos"';
+    $user = 'root';
+    $pass = '';
     
 
 # 3. Colocar los archivos en el servidor web (e.g. directorio 'htdocs' de XAMPP)
