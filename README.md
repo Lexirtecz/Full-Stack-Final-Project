@@ -50,33 +50,33 @@ El sistema interactúa con tres tablas principales, definidas por las consultas 
 ## 💻 Instalación y Ejecución
 
 * El archivo de configuración de conexión a la base de datos (`db.php`) debe estar presente y configurado en el directorio del Back-End.
-La instalación se basa en la colocación de archivos en la estructura de directorios del servidor web:
+*La instalación se basa en la colocación de archivos en la estructura de directorios del servidor web:
 
 
 # 1. Configurar y crear la Base de Datos (ej. en MySQL o PostgreSQL)
-    (Se debe crear un script SQL para las tablas login, usuarios_completos y permisos_sello)
+    *(Se debe crear un script SQL para las tablas login, usuarios_completos y permisos_sello)
 
 # 2. Configurar el archivo de conexión
-    Crear el archivo 'db.php' en el directorio Back-End
-    con los detalles de conexión a la base de datos (usuario, contraseña, nombre de la BD).
+    *Crear el archivo 'db.php' en el directorio Back-End
+    *con los detalles de conexión a la base de datos (usuario, contraseña, nombre de la BD).
 
 #    Ejemplo:
-    <?php
-    $host = 'localhost';
-    $db   = '"inter_sellos"';
-    $user = 'root';
-    $pass = '';
+    
+    *$host = 'localhost';
+    *$db   = '"inter_sellos"';
+    *$user = 'root';
+    *$pass = '';
     
 
 # 3. Colocar los archivos en el servidor web (e.g. directorio 'htdocs' de XAMPP)
-    La estructura de carpetas debe ser:
-    proyecto-fullstack/
-    ├── Back-End/       # Contiene todos los archivos PHP y JS de lógica (e.g., Login.php, AdminPermiso.js)
-    ├── Styles/         # Contiene todos los archivos CSS (e.g., Login Styles.css, Index.css)
-    ├── Pages/          # Contiene todos los archivos HTML (e.g., Index.html, Login.html)
-    └── photos/         # Contiene imágenes (e.g., Logo.png)
+    *La estructura de carpetas debe ser:
+    *proyecto-fullstack/
+    *├── Back-End/       # Contiene todos los archivos PHP y JS de lógica (e.g., Login.php, AdminPermiso.js)
+    *├── Styles/         # Contiene todos los archivos CSS (e.g., Login Styles.css, Index.css)
+    *├── Pages/          # Contiene todos los archivos HTML (e.g., Index.html, Login.html)
+    *└── photos/         # Contiene imágenes (e.g., Logo.png)
 
 # 4. Acceder al portal
-     Abrir el XAMPP y darle start al apache y mysql.
-    Abrir el navegador y navegar a la URL de la página de inicio (Index.html) o la página de Login.
-    URL Típica: http://localhost/proyecto-fullstack/Pages/Index.html
+    *Abrir el XAMPP y darle start al apache y mysql.
+    *Abrir el navegador y navegar a la URL de la página de inicio (Index.html) o la página de Login.
+    *URL Típica: http://localhost/proyecto-fullstack/Pages/Index.html
