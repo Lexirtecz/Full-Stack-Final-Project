@@ -31,8 +31,8 @@ El sistema implementa un completo **CRUD (Crear, Leer, Actualizar, Borrar)** a t
 | **Back-End** | **PHP** | Lógica de negocio, autenticación, y operaciones CRUD. (e.g., `Login.php`, `create_user.php`, `ActualizarPermiso.php`). |
 | **Front-End (Lógica)**| **JavaScript (JS)** | Manejo de formularios, validación, e interacción asíncrona (`fetch`) con el Back-End (e.g., `Login.js`, `Create_user.js`, `AdminPermiso.js`). |
 | **Front-End (Estructura)**| **HTML5** | Estructura de las 8 páginas principales del portal (e.g., `Index.html`, `Create User.html`, `Manage Permits.html`). |
-| **Estilos** | **CSS3 / Bootstrap** | Diseño *responsive* con estilos customizados. Paleta de colores institucional (Verde, Negro y acentos Amarillos). |
-| **Base de Datos** | **Relacional (MySQL/PostgreSQL)** | Se requiere una base de datos relacional con soporte para **PDO** para las consultas en PHP. El sistema asume tablas: `login`, `usuarios_completos` y `permisos_sello`. |
+| **Estilos** | **CSS / Bootstrap** | Diseño *responsive* con estilos customizados. Paleta de colores institucional (Verde, Negro y acentos Amarillos). |
+| **Base de Datos** | **Relacional (MySQL/Apache)** | Se requiere una base de datos relacional con soporte para **PDO** para las consultas en PHP. El sistema asume tablas: `login`, `usuarios_completos` y `permisos_sello`. |
 
 ## ⚙️ Estructura de la Base de Datos
 
@@ -44,8 +44,7 @@ El sistema interactúa con tres tablas principales, definidas por las consultas 
 
 ## 🚀 Requisitos para la Ejecución
 
-* Un servidor web con soporte para **PHP 7.4+** (o superior).
-* Un servidor de base de datos **MySQL** o **PostgreSQL** (configurado para usar **PDO**).
+* Un servidor de base de datos **MySQL**.
 
 
 ## 💻 Instalación y Ejecución
@@ -55,29 +54,30 @@ La instalación se basa en la colocación de archivos en la estructura de direct
 
 
 # 1. Configurar y crear la Base de Datos (ej. en MySQL o PostgreSQL)
-#    (Se debe crear un script SQL para las tablas login, usuarios_completos y permisos_sello)
+    (Se debe crear un script SQL para las tablas login, usuarios_completos y permisos_sello)
 
 # 2. Configurar el archivo de conexión
-#    Crear el archivo 'db.php' en el directorio Back-End
-#    con los detalles de conexión a la base de datos (usuario, contraseña, nombre de la BD).
-#
+    Crear el archivo 'db.php' en el directorio Back-End
+    con los detalles de conexión a la base de datos (usuario, contraseña, nombre de la BD).
+
 #    Ejemplo:
-#    <?php
-#    $host = 'localhost';
-#    $db   = 'nombre_de_la_bd';
-#    $user = 'usuario_bd';
-#    $pass = 'contraseña_bd';
-#    $charset = 'utf8mb4';
-#    # ... (código de conexión PDO)
+    <?php
+    $host = 'localhost';
+    $db   = 'nombre_de_la_bd';
+    $user = 'usuario_bd';
+    $pass = 'contraseña_bd';
+    $charset = 'utf8mb4';
+    
 
 # 3. Colocar los archivos en el servidor web (e.g. directorio 'htdocs' de XAMPP)
-#    La estructura de carpetas debe ser:
-#    proyecto-fullstack/
-#    ├── Back-End/       # Contiene todos los archivos PHP y JS de lógica (e.g., Login.php, AdminPermiso.js)
-#    ├── Styles/         # Contiene todos los archivos CSS (e.g., Login Styles.css, Index.css)
-#    ├── Pages/          # Contiene todos los archivos HTML (e.g., Index.html, Login.html)
-#    └── photos/         # Contiene imágenes (e.g., Logo.png)
+    La estructura de carpetas debe ser:
+    proyecto-fullstack/
+    ├── Back-End/       # Contiene todos los archivos PHP y JS de lógica (e.g., Login.php, AdminPermiso.js)
+    ├── Styles/         # Contiene todos los archivos CSS (e.g., Login Styles.css, Index.css)
+    ├── Pages/          # Contiene todos los archivos HTML (e.g., Index.html, Login.html)
+    └── photos/         # Contiene imágenes (e.g., Logo.png)
 
 # 4. Acceder al portal
-#    Abrir el navegador y navegar a la URL de la página de inicio (Index.html) o la página de Login.
-#    URL Típica: http://localhost/proyecto-fullstack/Pages/Index.html
+     Abrir el XAMPP y darle start al apache y mysql.
+    Abrir el navegador y navegar a la URL de la página de inicio (Index.html) o la página de Login.
+    URL Típica: http://localhost/proyecto-fullstack/Pages/Index.html
