@@ -53,27 +53,27 @@ El sistema interactúa con tres tablas principales, definidas por las consultas 
 * La instalación se basa en la colocación de archivos en la estructura de directorios del servidor web:
 
 
-# 1. Configurar y crear la Base de Datos
+## 1. Configurar y crear la Base de Datos
     (Se debe crear un script SQL para las tablas login, usuarios_completos y permisos_sello)
 
-# 2. Configurar el archivo de conexión (db.php en Back-End)
+## 2. Configurar el archivo de conexión (db.php en Back-End)
 
-```php
-// Ejemplo de variables de conexión:
+
+* **// Ejemplo de variables de conexión:**
 $host = 'localhost';
 $db   = 'inter_sellos';
 $user = 'root';
 $pass = '';
 
-# 3. Colocar los archivos en el servidor web (e.g. directorio 'htdocs' de XAMPP)
-   La estructura de carpetas debe ser:
+## 3. Colocar los archivos en el servidor web (e.g. directorio 'htdocs' de XAMPP)
+   * **La estructura de carpetas debe ser:**
 proyecto-fullstack/
 ├── Back-End/      # Lógica PHP/JS
 ├── Styles/        # Archivos CSS
 ├── Pages/         # Archivos HTML
 └── photos/        # Imágenes
 
-# 4. Acceder al portal
+## 4. Acceder al portal
   1. Abrir el XAMPP y darle start a Apache y MySQL.
 2. Abrir el navegador y navegar a la URL de la página de inicio (Index.html).
 
