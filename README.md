@@ -68,10 +68,10 @@ $pass = '';
 ## 3. Colocar los archivos en el servidor web (e.g. directorio 'htdocs' de XAMPP)
    * **La estructura de carpetas debe ser:**
 proyecto-fullstack/
- **├── Back-End/      # Lógica PHP/JS**
- **├── Styles/        # Archivos CSS**
- **├── Pages/         # Archivos HTML**
- **└── photos/        # Imágenes**
+* **├── Back-End/      # Lógica PHP/JS**
+* **├── Styles/        # Archivos CSS**
+* **├── Pages/         # Archivos HTML**
+* **└── photos/        # Imágenes**
 
 ## 4. Acceder al portal
   1. Abrir el XAMPP y darle start a Apache y MySQL.
