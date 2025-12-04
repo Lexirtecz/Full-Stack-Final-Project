@@ -1,1 +1,82 @@
-# Full-Stack-Final-Project
+# 🅿️ Portal de Estacionamiento: Inter Sellos (UIF)
+
+## 📝 Descripción
+
+Aplicación web Full-Stack desarrollada para modernizar y eficientizar la gestión de permisos de estacionamiento en el campus de la **Universidad Interamericana de Fajardo**. El sistema proporciona una plataforma segura y eficiente para que los usuarios (estudiantes y personal) soliciten, consulten, y actualicen sus permisos de estacionamiento, mientras que el equipo de seguridad y administración utiliza herramientas de gestión completas (CRUD).
+
+## 💡 Funcionalidades Principales
+
+El sistema implementa un completo **CRUD (Crear, Leer, Actualizar, Borrar)** a través de APIs desarrolladas en PHP.
+
+### Módulo de Usuario (Front-End)
+
+* **Registro de Usuarios (`Create User.html`):** Formulario extenso para la captura de datos personales, de licencia y de vehículo, enviado a `create_user.php`.
+* **Autenticación (`Login.html`):** Acceso seguro mediante validación de credenciales a través de `Login.php`, utilizando `password_verify()` para la verificación de *hashes* de contraseña.
+* **Estado de Permisos (`Permit Status.html`):** Consulta dinámica del historial de sellos, mostrando claramente si un permiso está **ACTIVO** o **EXPIRADO** basado en la fecha de expiración (`Permit-Status.js` consume `Permit-Status.php`).
+* **Navegación:** Enlaces directos a recursos del campus (`Inter Web`, `Inter Blackboard`).
+* **Contacto:** Formulario de contacto con validación básica (`contact-us.js`).
+
+### Módulo Administrativo (Back-End / Manejo de Seguridad)
+
+* **Administración de Permisos (`CrearPermiso.html`):** Panel principal para la gestión de sellos, permitiendo:
+    * **Crear/Actualizar:** Asignar o extender un sello de estacionamiento a un usuario (`ActualizarPermiso.php`).
+    * **Eliminar:** Eliminar permanentemente un registro de sello de la tabla `permisos_sello` (`BorrarPermiso.php`).
+    * **Consulta:** Obtener la lista completa de usuarios y el estado de sus permisos (`ConseguirPermiso.php`).
+* **Control de Acceso (`check_login.php`):** Archivo de control que asegura que las páginas administrativas solo sean accesibles si existe una sesión de usuario válida (`$_SESSION['user_id']`).
+
+## 🛠️ Tecnologías Clave
+
+| Categoría | Tecnología | Descripción / Archivos Clave |
+| :--- | :--- | :--- |
+| **Back-End** | **PHP** | Lógica de negocio, autenticación, y operaciones CRUD. (e.g., `Login.php`, `create_user.php`, `ActualizarPermiso.php`). |
+| **Front-End (Lógica)**| **JavaScript (JS)** | Manejo de formularios, validación, e interacción asíncrona (`fetch`) con el Back-End (e.g., `Login.js`, `Create_user.js`, `AdminPermiso.js`). |
+| **Front-End (Estructura)**| **HTML5** | Estructura de las 8 páginas principales del portal (e.g., `Index.html`, `Create User.html`, `Manage Permits.html`). |
+| **Estilos** | **CSS3 / Bootstrap** | Diseño *responsive* con estilos customizados. Paleta de colores institucional (Verde, Negro y acentos Amarillos). |
+| **Base de Datos** | **Relacional (MySQL/PostgreSQL)** | Se requiere una base de datos relacional con soporte para **PDO** para las consultas en PHP. El sistema asume tablas: `login`, `usuarios_completos` y `permisos_sello`. |
+
+## ⚙️ Estructura de la Base de Datos
+
+El sistema interactúa con tres tablas principales, definidas por las consultas en los archivos PHP:
+
+1.  **`login`**: Almacena credenciales de acceso (`username`, `password_hash`).
+2.  **`usuarios_completos`**: Almacena todos los datos de registro (nombre, info. vehicular, `student_id`).
+3.  **`permisos_sello`**: Almacena el ID de usuario y la `expiracion_sello`.
+
+## 🚀 Requisitos para la Ejecución
+
+* Un servidor web con soporte para **PHP 7.4+** (o superior).
+* Un servidor de base de datos **MySQL** o **PostgreSQL** (configurado para usar **PDO**).
+* El archivo de configuración de conexión a la base de datos (`db.php`) debe estar presente y configurado en el directorio del Back-End.
+
+## 💻 Instalación y Ejecución
+
+La instalación se basa en la colocación de archivos en la estructura de directorios del servidor web:
+
+```bash
+# 1. Configurar y crear la Base de Datos (ej. en MySQL o PostgreSQL)
+#    (Se debe crear un script SQL para las tablas login, usuarios_completos y permisos_sello)
+
+# 2. Configurar el archivo de conexión
+#    Crear el archivo 'db.php' en el directorio Back-End
+#    con los detalles de conexión a la base de datos (usuario, contraseña, nombre de la BD).
+#
+#    Ejemplo:
+#    <?php
+#    $host = 'localhost';
+#    $db   = 'nombre_de_la_bd';
+#    $user = 'usuario_bd';
+#    $pass = 'contraseña_bd';
+#    $charset = 'utf8mb4';
+#    # ... (código de conexión PDO)
+
+# 3. Colocar los archivos en el servidor web (e.g. directorio 'htdocs' de XAMPP)
+#    La estructura de carpetas debe ser:
+#    proyecto-fullstack/
+#    ├── Back-End/       # Contiene todos los archivos PHP y JS de lógica (e.g., Login.php, AdminPermiso.js)
+#    ├── Styles/         # Contiene todos los archivos CSS (e.g., Login Styles.css, Index.css)
+#    ├── Pages/          # Contiene todos los archivos HTML (e.g., Index.html, Login.html)
+#    └── photos/         # Contiene imágenes (e.g., Logo.png)
+
+# 4. Acceder al portal
+#    Abrir el navegador y navegar a la URL de la página de inicio (Index.html) o la página de Login.
+#    URL Típica: http://localhost/proyecto-fullstack/Pages/Index.html
