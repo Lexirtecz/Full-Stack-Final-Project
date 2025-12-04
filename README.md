@@ -54,10 +54,10 @@ El sistema interactúa con tres tablas principales, definidas por las consultas 
 
 
 # 1. Configurar y crear la Base de Datos
-#    (Se debe crear un script SQL para las tablas login, usuarios_completos y permisos_sello)
+    (Se debe crear un script SQL para las tablas login, usuarios_completos y permisos_sello)
 
 # 2. Configurar el archivo de conexión (db.php en Back-End)
-#    Ejemplo de variables de conexión:
+    Ejemplo de variables de conexión:
 
 $host = 'localhost';
 $db   = 'inter_sellos';
@@ -65,15 +65,15 @@ $user = 'root';
 $pass = '';
 
 # 3. Colocar los archivos en el servidor web (e.g. directorio 'htdocs' de XAMPP)
-#    La estructura de carpetas debe ser:
-#    proyecto-fullstack/
-#    ├── Back-End/
-#    ├── Styles/
-#    ├── Pages/
-#    └── photos/
+    La estructura de carpetas debe ser:
+    proyecto-fullstack/
+    ├── Back-End/
+    ├── Styles/
+    ├── Pages/
+    └── photos/
 
 # 4. Acceder al portal
-#    Abrir el XAMPP y darle start al apache y mysql.
-#    Abrir el navegador y navegar a la URL de la página de inicio (Index.html).
+    Abrir el XAMPP y darle start al apache y mysql.
+    Abrir el navegador y navegar a la URL de la página de inicio (Index.html).
 
 URL Típica: http://localhost/proyecto-fullstack/Pages/Index.html
